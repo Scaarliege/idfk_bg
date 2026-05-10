@@ -1,0 +1,41 @@
+# Wallpaper Engine Configuration Template
+# Copy as config.json and modify to customize the application
+
+{
+  "display": {
+    "width": 1920,
+    "height": 1080,
+    "fullscreen": false,
+    "fps": 60
+  },
+  "particles": {
+    "count": 100,
+    "min_size": 1,
+    "max_size": 5,
+    "min_velocity": -0.5,
+    "max_velocity": 0.5,
+    "max_speed_cap": 0.8
+  },
+  "connections": {
+    "radius": 120,
+    "grid_cell_size": 120
+  },
+  "effects": {
+    "motion_blur_alpha": 30,
+    "noise_amount": 800,
+    "noise_max_alpha": 15,
+    "enable_vignette": true,
+    "enable_bloom": false
+  },
+  "colors": {
+    "use_random": true,
+    "color_a": [255, 0, 100],
+    "color_b": [0, 255, 155],
+    "hue_shift_speed": 0.0001
+  },
+  "input": {
+    "enable_mouse_interaction": true,
+    "grab_radius": 100,
+    "force_multiplier": 0.05
+  }
+}
