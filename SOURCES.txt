@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+wallpaper_engine/__init__.py
+wallpaper_engine/__main__.py
+wallpaper_engine/app.py
+wallpaper_engine/effects.py
+wallpaper_engine/particles.py
+wallpaper_engine.egg-info/PKG-INFO
+wallpaper_engine.egg-info/SOURCES.txt
+wallpaper_engine.egg-info/dependency_links.txt
+wallpaper_engine.egg-info/entry_points.txt
+wallpaper_engine.egg-info/requires.txt
+wallpaper_engine.egg-info/top_level.txt

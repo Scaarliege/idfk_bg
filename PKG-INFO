@@ -1,0 +1,158 @@
+Metadata-Version: 2.4
+Name: wallpaper-engine
+Version: 1.0.0
+Summary: An interactive particle system wallpaper with flowing connections and hue shifting
+Home-page: https://github.com/yourusername/wallpaper-engine
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Multimedia :: Graphics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pygame>=2.1.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Wallpaper Engine
+
+An interactive particle system wallpaper with flowing connections and dynamic hue shifting effects.
+
+## Features
+
+- **Particle System**: 100 animated particles with smooth motion and pulsing effects
+- **Dynamic Connections**: Particles connect with gradient lines when nearby, with distance-based opacity
+- **Hue Shifting**: Colors smoothly rotate through the color spectrum over time
+- **Interactive**: Click and drag particles around with your mouse
+- **Post-Processing**: Film grain noise and vignette effects for atmosphere
+- **Performance Optimized**: Spatial grid for efficient neighbor detection
+
+## Installation
+
+### From PyPI (when published)
+
+```bash
+pip install wallpaper-engine
+```
+
+### From Source
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/wallpaper-engine
+cd wallpaper-engine
+
+# Install in development mode
+pip install -e .
+```
+
+## Usage
+
+### Run as Application
+
+```bash
+# Windowed mode
+python -m wallpaper_engine
+
+# Fullscreen mode
+python -m wallpaper_engine --fullscreen
+```
+
+### Using Console Script
+
+```bash
+# After installation
+wallpaper-engine
+wallpaper-engine --fullscreen
+```
+
+### In Python Code
+
+```python
+from wallpaper_engine.app import WallpaperEngine
+
+# Create and run the engine
+engine = WallpaperEngine(width=1920, height=1080, fullscreen=True)
+engine.run()
+```
+
+## Controls
+
+- **Mouse Click + Drag**: Apply force to nearby particles
+- **Escape Key**: Exit the application
+- **Close Window**: Exit the application
+
+## Customization
+
+Edit `wallpaper_engine/app.py` to customize:
+
+- Number of particles: `num_particles=100`
+- Connection radius: `self.particles.connection_radius = 120`
+- Particle speed cap: `particle.cap_speed(0.8)`
+- Motion blur intensity: `screen.fill((0, 0, 0, 30))`
+- Film grain amount: `add_noise(screen, amount=800, max_alpha=15)`
+
+## Building Executable
+
+### Using PyInstaller
+
+```bash
+# Install PyInstaller
+pip install pyinstaller
+
+# Build executable
+pyinstaller wallpaper_engine.spec
+
+# Executable will be in dist/ directory
+```
+
+## System Requirements
+
+- Python 3.8+
+- Pygame 2.1.0+
+- ~50MB disk space for executable
+
+## Platform Support
+
+- **Windows**: Fully supported
+- **macOS**: Fully supported
+- **Linux**: Fully supported
+
+## Performance
+
+- Runs smoothly at 60 FPS with 100 particles
+- Optimized spatial grid prevents O(n²) particle comparisons
+- Minimal CPU/GPU usage suitable for background wallpaper
+
+## License
+
+MIT License - see LICENSE file for details
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Future Enhancements
+
+- [ ] Preset color schemes
+- [ ] Audio reactivity
+- [ ] Particle trail effects
+- [ ] Customizable particle counts via UI
+- [ ] Configuration file support
+- [ ] Linux desktop environment integration
+- [ ] Windows wallpaper API integration
